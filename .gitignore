@@ -1,0 +1,19 @@
+# Build output
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.map
+*.list
+*.su
+*.cyclo
+
+# IDE local state
+.settings/language.settings.xml
+*.launch
+.metadata/
+
+# OS / editor
+.DS_Store
+*.swp
