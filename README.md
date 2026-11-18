@@ -148,7 +148,7 @@ Checked in SETTLE, FORWARD and TURN. Any of them stops the motors and enters FAU
 Open the serial port (Linux example):
 
 ```bash
-picocom -b 115200 /dev/ttyACM0
+minicom -D /dev/ttyACM0 -b 115200
 ```
 
 Boot sequence (offset values differ per chip):
@@ -205,11 +205,6 @@ All thresholds are `#define`s in the CONFIGURATION section of `Core/Src/main.c`:
 - Heading comes from gyro integration only and slowly drifts while driving. Bias is re-learned whenever the robot is parked in IDLE.
 - No wheel encoders yet, so speed is open loop and the robot may veer when driving straight.
 - The accelerometer offsets assume a flat floor. On ramps the tilt adds to `axy`.
-
-## Roadmap
-
-- Wheel encoders and closed-loop speed control
-- v2: Raspberry Pi over UART for higher-level autonomy, CAN for distributed nodes, camera / LiDAR
 
 ## Repository layout
 
